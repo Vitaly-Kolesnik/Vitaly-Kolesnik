@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+</head>
+<body>
+    <center><h1>Заполните анкету</h1></center>
+    <form action="http://sc.it-academy.by/fe/form.php">
+        <Fieldset>
+        <legend>Личные данные</legend>
+            <span><input type="text" name="Фамилия" size="25" maxlength = "25"  pattern="^[А-Яа-яЁё]+$"   placeholder="Фамилия" autofocus required/><br>
+            <input type="text" name="Имя" size="25" maxlength = "20" pattern="^[А-Яа-яЁё]+$"  required placeholder="Имя"/><br>
+            <input type="text" name="Отчество" size="25" maxlength = "24" pattern="^[А-Яа-яЁё]+$" required placeholder="Отчество"/></span>
+        
+            <fieldset>
+                <legend>Паспортные данные</legend>
+                <span><input type="text" name="Серия паспорта" size="2" maxlength = "2"required placeholder="AA" pattern="^[A-Z]{,2}" ></span>
+                <span><input type="text" name="Номер паспорта" size="7" maxlength = "7"required placeholder="1234567" pattern="[0-9]{7}" ></span>
+            </fieldset>
+        
+            <fieldset>
+            <legend>Дата рождения</legend>
+            <span><input type="text" name="Год рождения" size="4" maxlength="4" required placeholder="2000" pattern="[0-9]{4}"/><br>
+        
+                <select>
+                <option>Январь</option>
+                <option>Февраль</option>
+                <option>Марта</option>
+                <option>Апрель</option>
+                <option>Май</option>
+                <option>Июнь</option>
+                <option>Июль</option>
+                <option>Август</option>
+                <option>Сентябрь</option>
+                <option>Октябрь</option>
+                <option>Ноябрь</option>
+                <option>Декабрь</option>
+                </select><br>
+                <input type="number" name="Дата рождения" size="2" maxlength = "2" required placeholder="" min="1" max="31" pattern="[0-9]{1,31}" step="1"/></span>
+            </fieldset>
+        
+            <span><select required placeholder="РБ">
+            <option>РБ</option>
+            <option>РФ</option>
+            </select> (Национальность - выбор одного значения из списка, обязательное поле)<br>
+            Адрес:<br>
+            <input type="text" name="Адрес" maxlength = "100"/></span>
+        </Fieldset>
+
+        <fieldset>
+        <legend>Интересы</legend>
+            <fieldset>
+            <legend>Хобби</legend>
+                <span><input type="checkbox" name="Хобби v1" value="Рыбалка"/>Рыбалка<br>
+                <input type="checkbox" name="Хобби v2" value="Астрономия"/>Астрономия<br>
+                <input type="checkbox" name="Хобби v3" value="Дайвинг"/>Дайвинг<br>
+                <input type="checkbox" name="Хобби v4" value="Марки"/>Марки</span>
+            </fieldset>
+            <fieldset>
+            <legend>Домашние животные (возможность выбрать несколько вариантов):</legend>
+                <span>Список<br>
+                <select multiple name="Домашние животные" size="12"> 
+                <optgroup label="Попугаи">
+                <option  value="Volnist">Волнистый</option>
+                <option value="Ara">Ара</option>
+                <option value="Nerazluch">Неразлучник</option>
+                <optgroup label="Рыба">
+                <option  value="Karasi">Караси</option>
+                <option value="Ocyni">Окуни</option>
+                <option value="Oseter">Осётр</option>
+                <optgroup label="Птицы">
+                <option value="Stay voron">Стая ворон</option>
+                <option  value="Aist">Аист</option>
+                <option  value="Arheopter">Археоптерикс</option>
+                </select></span>
+            </fieldset>    
+        </fieldset>
+        
+        <fieldset>
+        <legend>Данные для ввода и восстановления пароля</legend>
+            <span><input type="text" name="Логин" size="20" minlength="5" maxlength = "25"  pattern="^[a-zA-Z]+$"  required placeholder="Логин"/><br>
+            <input type="text" name="Пароль" size="20" minlength="10" maxlength = "20" pattern="^[a-zA-Z]+$" required placeholder="Пароль" autocomplete="off" /></span>
+        </fieldset>        
+        
+        <fieldset> 
+        <legend>Координаты:</legend>  
+            <span><input type="email" name="мыло" required placeholder="введите адрес почты"/><br>
+            <input type="url" name="Сайт"  required placeholder="введите адрес сайта"/></span>
+        </fieldset> 
+        
+        <fieldset>
+        <legend>Цифры</legend>
+            <span><input type="number" size="10"  name="Диапазон" step="0.1" pattern="" min="-2.5" max="2.5"/> <br>
+            <input type="range" min="1" max="10" step="1" value="5"/></span>
+        </fieldset>
+        
+        <fieldset>
+        <legend>Кнопки управления</legend>
+        <span><button type="submit"  formaction="http://sc.it-academy.by/fe/form.php">Отправить</button></span>
+       <span><button type="reset"  >Сбросить</button><br>
+        <button><img src="email.jpg" ></button></span>
+        </fieldset>
+       
+
+    </form>
+</body>
+</html>
